@@ -20,8 +20,8 @@ int main(int argc, char* argv[]) {
                 cipher += char((((int(k_char) - start) + (int(plain[i]) - start)) % modulus) + start);
             }
         }
-        cout << "\nText:\n" <<   text << "\n\n";
-        cout << "Key:\n" <<    key << "\n\n";
+        cout << "\nText:\n" << text << "\n\n";
+        cout << "Key:\n" << key << "\n\n";
         cout << "Cipher:\n" << cipher << "\n\n";
         return 0;
     } else if (string(argv[1]) == "-d") {

@@ -1,4 +1,4 @@
-[One-time pad](https://en.wikipedia.org/wiki/One-time_pad) implementation in C++.
+Very simple [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) implementation in C++.
 
 ### Compile
 

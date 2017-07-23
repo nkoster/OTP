@@ -1,6 +1,6 @@
 [One-time pad](https://en.wikipedia.org/wiki/One-time_pad) implementation in C++.
 
-Compile:
+### Compile
 
 ````
 g++ -O -Wall -std=c++11 otp.cpp -o otp
@@ -10,12 +10,18 @@ g++ -O -Wall -std=c++11 otp.cpp -o otp
 
 #### encrypt
 
-`echo 'My secret' | ./otp`
+````
+echo 'My secret' | ./otp
+````
 
 Convert complex text or binary data to base64, first:
 
-`ls -l | base64 | ./otp`
+````
+ls -l | base64 | ./otp
+````
 
 #### decrypt
 
-`./otp -d`
+````
+./otp -d
+````

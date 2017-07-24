@@ -48,7 +48,9 @@ int main(int argc, char* argv[]) {
             << "   encrypt:   echo 'My secret' | ./otp\n"
             << "   decrypt:   ./otp -d\n\n"
             << "Convert complex text or binary data to base64, first:\n\n"
-            << "   encrypt:   ls -l | base64 | ./otp\n\n";
+            << "   encrypt:   ls -l | base64 | ./otp\n\n"
+            << "Please be aware of the limitations when decrypting (copy/paste)\n"
+            << "https://gitlab.com/nkoster/otp/blob/master/README.md\n\n";
         return 0;
     }
 }

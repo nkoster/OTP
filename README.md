@@ -27,4 +27,4 @@ ls -l | base64 | ./otp
 ````
 
 Limited, because of by [copy-paste](https://stackoverflow.com/questions/22886167/read-a-string-of-length-greater-than-4096-bytes-from-stdin-in-c).
-Otherwise, cipher and/or key material goes to disk, which is likely unwanted. To do: make wrting to files posible, altough it's unsave.
+Otherwise, cipher and/or key material goes to disk, which is likely unwanted. To do: make writing to files posible, altough it's unsave.

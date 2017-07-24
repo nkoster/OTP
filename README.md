@@ -7,7 +7,7 @@ Limited in size when decrypting ("-d"), because of this:
 For instance, in my Linux laptop, this issue will become problametic when the copy-paste contains more than 4092 bytes, using a combination of Terminator and Bash.
 
 To do: make processing more bytes than the copy-paste limit (reading the cipher from stdin and the and the key from a file) possible with the "-d" option, altough that's unsave:
-the key goes to disk, which is likely unwanted, or, at least needs extra attention in shredding the key.
+the key has to be stored on a computer disk, which is likely unwanted, or, at least needs extra attention in shredding the key.
 
 ### Compile
 

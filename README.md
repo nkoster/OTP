@@ -8,7 +8,7 @@ For instance, in my Linux laptop, this issue will become problametic when the co
 
 To do: make processing of more bytes than the copy-paste limit possible.
 That means, reading the cipher from stdin and the and the key from a file, with the "-d" option, altough that's unsave:
-the key has to be stored on a computer disk, which is likely unwanted, or, at least needs extra attention in [shredding](https://en.wikipedia.org/wiki/Shred_(Unix) the key.
+the key has to be stored on a computer disk, which is likely unwanted, or, at least needs extra attention in [shredding](https://en.wikipedia.org/wiki/Shred_(Unix)) the key.
 Automated key shredding when decrypting might be an interesting feature as well.
 
 ### Compile

@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     const int modulus = 92;
-    const int start = 32;
+    const int start = 33;
     int c, k, m;
     char k_char;
     string plain="", text="", key="", cipher="";

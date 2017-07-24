@@ -1,5 +1,7 @@
 Very simple [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) implementation in C++.
 
+Youtube video: https://www.youtube.com/watch?v=FlIG3TvQCBQ
+
 Very limited, because of this [copy-paste](https://stackoverflow.com/questions/22886167/read-a-string-of-length-greater-than-4096-bytes-from-stdin-in-c) thing.
 In Linux, this issue will be problametic when the copy-paste contains more than 4092 bytes, in SSH/TTY/bash.
 

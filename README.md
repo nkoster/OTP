@@ -1,8 +1,13 @@
 Very simple [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) implementation in C++.
 
-Very limited, because of [copy-paste](https://stackoverflow.com/questions/22886167/read-a-string-of-length-greater-than-4096-bytes-from-stdin-in-c).
-Otherwise, cipher and/or key material goes to disk, which is likely unwanted.
-To do: make processing more than the copy-paste limit (writing to files) possible, altough it's unsave.
+Youtube video: https://www.youtube.com/watch?v=FlIG3TvQCBQ
+
+Limited in size when decrypting ("-d"), because of this:
+[copy-paste issue](https://stackoverflow.com/questions/22886167/read-a-string-of-length-greater-than-4096-bytes-from-stdin-in-c) thing.
+In Linux, this issue will become problametic when the copy-paste contains more than 4092 bytes, in SSH/TTY/bash.
+
+To do: make processing more bytes than the copy-paste limit (thus writing cipher and key to files) possible with the "-d" option, altough that's unsave:
+the key goes to disk, which is likely unwanted, or, at least needs extra attention in shredding the key.
 
 ### Compile
 
@@ -29,3 +34,5 @@ ls -l | base64 | ./otp
 ````
 ./otp -d
 ````
+
+(limited, see above!)

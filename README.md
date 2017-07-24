@@ -6,7 +6,7 @@ Limited in size when decrypting ("-d"), because of this [copy-paste](https://sta
 In Linux, this issue will be problametic when the copy-paste contains more than 4092 bytes, in SSH/TTY/bash.
 
 To do: make processing more bytes than the copy-paste limit (thus writing cipher and key to files) possible with the "-d" option, altough that's unsave:
-key material goes to disk, which is likely unwanted, or, at least needs extra attention in shredding the key.
+the key goes to disk, which is likely unwanted, or, at least needs extra attention in shredding the key.
 
 ### Compile
 

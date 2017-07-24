@@ -4,7 +4,7 @@ Youtube video: https://www.youtube.com/watch?v=FlIG3TvQCBQ
 
 Limited in size when decrypting ("-d"), because of this:
 [copy-paste issue](https://stackoverflow.com/questions/22886167/read-a-string-of-length-greater-than-4096-bytes-from-stdin-in-c).
-For instance, in my Linux laptop, this issue will become problametic when the copy-paste contains more than 4092 bytes, using a combination of Terminater and Bash.
+For instance, in my Linux laptop, this issue will become problametic when the copy-paste contains more than 4092 bytes, using a combination of Terminator and Bash.
 
 To do: make processing more bytes than the copy-paste limit (thus writing cipher and key to files) possible with the "-d" option, altough that's unsave:
 the key goes to disk, which is likely unwanted, or, at least needs extra attention in shredding the key.

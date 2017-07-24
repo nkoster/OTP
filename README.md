@@ -4,7 +4,7 @@ Very limited, because of this [copy-paste](https://stackoverflow.com/questions/2
 In Linux, this issue will be problametic when the copy-paste contains more than 4092 bytes.
 
 To do: make processing more bytes than the copy-paste limit (thus writing cipher and key to files) possible, altough that's unsave:
-cipher and/or key material go to disk, which is likely unwanted, or, needs extra attention in shredding the key material.
+key material goes to disk, which is likely unwanted, or, at least needs extra attention in shredding the key.
 
 ### Compile
 

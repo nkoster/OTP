@@ -5,18 +5,23 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    string kfile="", cipher="";
+    string key="", kfile="", cipher="", cipher_buf="";
     if (argc > 1) {
         if (argc > 2 && string(argv[1]) == "-kfile") {
-            getline(cin, cipher);
+            while (getline(cin, cipher_buf))
+                cipher += cipher_buf;
             kfile = string(argv[2]);
-            cout << kfile << "\n";
-            //ifstream kfile_stream(kfile, ios::binary);
+            cout << "\nReading key from " << kfile << "\n\nKey: ";
             ifstream kfile_stream(kfile);
             while (kfile_stream)
-                cout << char(kfile_stream.get());
-            cout << "\n";
-            cout << "\nCipher: " << cipher << "\n";
+                key += char(kfile_stream.get());
+            if (key.length() < cipher.length()) {
+                cerr << " Error: Key length cannot be shorter than cipher length.\n";
+                return 1;
+            }
+            cout
+                << "\nKey: " << key << "\n"
+                << "\nCipher: " << cipher << "\n";
         }
     }
 

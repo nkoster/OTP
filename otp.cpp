@@ -2,16 +2,18 @@
 #include <fstream>
 #include <ctime>
 #include <string>
+#include <cstdio>
 
 using namespace std;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char** argv) {
     const int modulus = 92;
     const int start = 33;
     int c, k, m;
     char k_char;
     string key="", key_buf="", kfile="", cipher="", cipher_buf="", plain="", text="";
-    if (argc == 1) {
+    string cipher_file_name="/tmp/cipher.otp", key_file_name="/tmp/key.otp";
+    if ((argc == 1) || (argc == 2 && string(argv[1]) == "-w")) {
         srand(time(0));
         while (getline(cin, plain)) {
             for (int i = 0; i < int(plain.length()); i++) {
@@ -21,10 +23,25 @@ int main(int argc, char* argv[]) {
                 cipher += char((((int(k_char) - start) + (int(plain[i]) - start)) % modulus) + start);
             }
         }
-        cout << "\nText:\n" << text << "\n\n";
-        cout << "Key:\n" << key << "\n\n";
-        cout << "Cipher:\n" << cipher << "\n\n";
-        return 0;
+        if (argc == 2 && string(argv[1]) == "-w") {
+            cout
+                << "\nWriting cipher to " << cipher_file_name << "\n"
+                << "   Writing key to " << key_file_name << "\n\n";
+            ofstream cipher_file;
+            cipher_file.open(cipher_file_name);
+            cipher_file << cipher;
+            cipher_file.close();
+            ofstream key_file;
+            key_file.open(key_file_name);
+            key_file << key;
+            key_file.close();
+            return 0;
+        } else {
+            cout << "\nText:\n" << text << "\n\n";
+            cout << "Key:\n" << key << "\n\n";
+            cout << "Cipher:\n" << cipher << "\n\n";
+            return 0;
+        }
     } else if (argc == 2 && string(argv[1]) == "-d") {
         cout << "\nCipher: ";
         getline(cin, cipher);

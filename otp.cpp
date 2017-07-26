@@ -62,7 +62,7 @@ int main(int argc, char* argv[]) {
             if (m < 0) m += modulus;
             plain += char((m % modulus) + start);
         }
-        cout << " Plain: " << plain << "\n\n";
+        cout << "\n\n" << plain << "\n\n";
         return 0;
     } else {
         cout 
@@ -71,7 +71,7 @@ int main(int argc, char* argv[]) {
             << "   decrypt:   ./otp -d\n\n"
             << "Convert complex text or binary data to base64, first:\n\n"
             << "   encrypt:   ls -l | base64 | ./otp\n\n"
-            << "Please be aware of the limitations when decrypting by copy/paste)\n"
+            << "Please be aware of the limitations when decrypting by copy/paste!\n"
             << "https://gitlab.com/nkoster/otp/blob/master/README.md\n\n"
             << "Decrypt from stdin and a key file:\n\n"
             << "   decrypt:   cat cipher.txt | ./otp -d -kfile key.txt\n"

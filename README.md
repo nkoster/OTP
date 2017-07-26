@@ -44,7 +44,7 @@ Use stdin for the cipher and read the key from a file:
 cat cipher.txt | ./otp -d -kfile key.txt
 ````
 
-Don NOT forget to [shredd](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
+Don NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
 
 #### To do
 

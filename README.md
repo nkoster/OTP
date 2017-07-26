@@ -6,7 +6,7 @@ Limited in size when decrypting ("-d"), because of this
 [copy/paste issue](https://stackoverflow.com/questions/22886167/read-a-string-of-length-greater-than-4096-bytes-from-stdin-in-c).
 For instance, on my Linux laptop, this issue will become problametic when the copy/paste contains more than 4092 bytes, using a combination of Terminator and Bash.
 
-You can decide to decrypt from files, but you have to understand the risk increasement when doing so.
+You can decide to decrypt from files, but you have to understand the risk increment when doing so.
 
 ### Compile
 

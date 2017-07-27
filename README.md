@@ -55,6 +55,12 @@ cat /tmp/otp.cipher | ./otp -d -kfile /tmp/otp.key
 
 Do NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
 
+#### Test
+
+````
+cat jdk-8u112-linux-x64.tar.gz | base64 | otp -w ; cat /tmp/otp.cipher | otp -d -kfile /tmp/otp.key | base64 -d >/tmp/test.tgz ; tar tzf /tmp/test.tgz
+````
+
 #### To do
 
 Automated key shredding when decrypting might be an interesting feature as well.

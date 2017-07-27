@@ -82,7 +82,7 @@ int main(int argc, char** argv) {
         return 0;
     } else {
         cout 
-            << "\nSimple one-time pad, for the paranoids! (niels@w3b.net)\n\n"
+            << "\nSimple one-time pad CLI. Bugs by Niels Koster.\n\n"
             << "   encrypt:   echo 'My secret' | ./otp\n"
             << "   decrypt:   ./otp -d\n\n"
             << "Please be aware of the limitations when decrypting by copy/paste!\n"

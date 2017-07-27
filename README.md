@@ -28,6 +28,12 @@ Convert complex text or binary data to base64, first:
 ls -l | base64 | ./otp
 ````
 
+Write the cipher and the key to /tmp/otp.cipher and /tmp/otp.key:
+
+````
+cat file | base64 | ./otp -w
+````
+
 #### Decrypt
 
 ````
@@ -41,7 +47,7 @@ ls -l | base64 | ./otp
 Use stdin for the cipher and read the key from a file:
 
 ````
-cat cipher.txt | ./otp -d -kfile key.txt
+cat /tmp/otp.cipher | ./otp -d -kfile /tmp/otp.key
 ````
 
 Don NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!

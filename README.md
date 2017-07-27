@@ -35,6 +35,8 @@ Write the cipher and the key to `/tmp/otp.cipher` and `/tmp/otp.key`:
 cat file | base64 | ./otp -w
 ````
 
+Careful: Do NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
+
 #### Decrypt interactive
 
 ````

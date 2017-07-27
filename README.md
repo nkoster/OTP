@@ -2,7 +2,7 @@ Simple [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) CLI implementa
 
 Youtube video: https://www.youtube.com/watch?v=FlIG3TvQCBQ
 
-Limited in size when decrypting ("-d"), because of this
+Limited in size when decrypting from console ("-d" argument), because of this
 [copy/paste issue](https://stackoverflow.com/questions/22886167/read-a-string-of-length-greater-than-4096-bytes-from-stdin-in-c).
 For instance, on my Linux laptop, this issue will become problametic when the copy/paste contains more than 4092 bytes, using a combination of Terminator and Bash.
 

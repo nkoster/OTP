@@ -7,7 +7,7 @@ Limited in size when decrypting from console ("-d" argument), because of this
 For instance, on my Linux laptop, this issue will become problametic when the copy/paste contains more than 4092 bytes, using a combination of Terminator and Bash.
 
 You can decide to encrypt/decrypt from files, but you have to understand the risk increment when doing so:
-Don NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
+Do NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
 
 ### Compile
 
@@ -51,7 +51,7 @@ Use stdin for the cipher and read the key from a file:
 cat /tmp/otp.cipher | ./otp -d -kfile /tmp/otp.key
 ````
 
-Don NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
+Do NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
 
 #### To do
 

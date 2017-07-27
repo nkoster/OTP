@@ -57,9 +57,13 @@ Do NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key fil
 
 #### Test
 
+An example test one-liner.
+
 ````
 cat jdk-8u112-linux-x64.tar.gz | base64 | otp -w ; cat /tmp/otp.cipher | otp -d -kfile /tmp/otp.key | base64 -d >/tmp/test.tgz ; tar tzf /tmp/test.tgz
 ````
+
+This should output the content of the newly written test.tgz.
 
 #### To do
 

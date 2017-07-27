@@ -16,7 +16,7 @@ g++ -O -Wall -std=c++11 otp.cpp -o otp
 
 ### Usage:
 
-#### encrypt
+### Encrypt
 
 ````
 echo 'My secret' | ./otp

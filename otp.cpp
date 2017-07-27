@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
     int c, k, m;
     char k_char;
     string key="", key_buf="", kfile="", cipher="", cipher_buf="", plain="", text="";
-    string cipher_file_name="/tmp/cipher.otp", key_file_name="/tmp/key.otp";
+    string cipher_file_name="/tmp/otp.cipher", key_file_name="/tmp/otp.key";
     if ((argc == 1) || (argc == 2 && string(argv[1]) == "-w")) {
         srand(time(0));
         while (getline(cin, plain)) {
@@ -64,7 +64,6 @@ int main(int argc, char** argv) {
         while (getline(cin, cipher_buf))
             cipher += cipher_buf;
         kfile = string(argv[3]);
-        cout << "\nReading key from " << kfile << "\n\n";
         ifstream kfile_stream(kfile);
         while (getline(kfile_stream, key_buf))
             key += key_buf;
@@ -79,19 +78,21 @@ int main(int argc, char** argv) {
             if (m < 0) m += modulus;
             plain += char((m % modulus) + start);
         }
-        cout << "\n\n" << plain << "\n\n";
+        cout << plain;
         return 0;
     } else {
         cout 
             << "\nSimple one-time pad, for the paranoids! (niels@w3b.net)\n\n"
             << "   encrypt:   echo 'My secret' | ./otp\n"
             << "   decrypt:   ./otp -d\n\n"
-            << "Convert complex text or binary data to base64, first:\n\n"
-            << "   encrypt:   ls -l | base64 | ./otp\n\n"
             << "Please be aware of the limitations when decrypting by copy/paste!\n"
             << "https://gitlab.com/nkoster/otp/blob/master/README.md\n\n"
+            << "Convert complex text or binary data to base64, first:\n\n"
+            << "   encrypt:   ls -l | base64 | ./otp\n\n"
+            << "Write the cipher and the key to /tmp/otp.cipher and /tmp/otp.key:\n\n"
+            << "   encrypt:   cat file | base64 | ./otp -w\n\n"
             << "Decrypt from stdin and a key file:\n\n"
-            << "   decrypt:   cat cipher.txt | ./otp -d -kfile key.txt\n"
+            << "   decrypt:   cat " << cipher_file_name << " | ./otp -d -kfile " << key_file_name << "\n"
             << "              (Don't forget to shred the key file!)\n\n";
         return 0;
     }

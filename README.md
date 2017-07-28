@@ -66,7 +66,8 @@ One more time: Do NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Uni
 A test example:
 
 ````
-cat jdk-8u112-linux-x64.tar.gz | base64 | otp -w ; cat /tmp/otp.cipher | otp -d -kfile /tmp/otp.key | base64 -d >/tmp/test.tgz ; tar tzf /tmp/test.tgz
+cat jdk-8u112-linux-x64.tar.gz | \
+  base64 | otp -w ; cat /tmp/otp.cipher | otp -d -kfile /tmp/otp.key | base64 -d >/tmp/test.tgz ; tar tzf /tmp/test.tgz
 ````
 
 This should output the content of the newly written test.tgz.

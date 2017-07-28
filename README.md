@@ -1,3 +1,5 @@
+# REPOSITORY MOVED TO GITHUB.COM: https://github.com/nkoster/OTP
+
 Simple [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) CLI implementation in C++.
 
 Youtube video: https://www.youtube.com/watch?v=FlIG3TvQCBQ

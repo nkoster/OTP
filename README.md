@@ -9,10 +9,18 @@ For instance, on my Linux laptop, this issue will become problametic when the co
 You can decide to encrypt/decrypt from files, but you have to understand the risk when doing so:
 Do NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
 
-### Compile
+### Install
+
+Compile:
 
 ````
 g++ -O -Wall -std=c++11 otp.cpp -o otp
+````
+
+Install:
+
+````
+sudo cp otp /usr/local/bin
 ````
 
 ### Usage:

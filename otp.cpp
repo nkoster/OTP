@@ -24,18 +24,27 @@ int main(int argc, char** argv) {
             }
         }
         if (argc == 2 && string(argv[1]) == "-w") {
-            cout
-                << "\nWriting cipher to " << cipher_file_name << "\n"
-                << "   Writing key to " << key_file_name << "\n\n";
             ofstream cipher_file;
             cipher_file.open(cipher_file_name);
-            cipher_file << cipher;
-            cipher_file.close();
+            if (cipher_file.is_open()) {
+                cout << "\nWriting cipher to " << cipher_file_name << "\n";
+                cipher_file << cipher;
+                cipher_file.close();
+            } else {
+                cerr << "\nCan't write " << cipher_file_name << "\n\n";
+                return 1;
+            }
             ofstream key_file;
             key_file.open(key_file_name);
-            key_file << key;
-            key_file.close();
-            return 0;
+            if (key_file.is_open()) {
+                cout << "   Writing key to " << key_file_name << "\n\n";
+                key_file << key;
+                key_file.close();
+                return 0;
+            } else {
+                cerr << "\nCan't write " << key_file_name << "\n\n";
+                return 1;
+            }
         } else {
             cout << "\nText:\n" << text << "\n\n";
             cout << "Key:\n" << key << "\n\n";
@@ -65,10 +74,15 @@ int main(int argc, char** argv) {
             cipher += cipher_buf;
         kfile = string(argv[3]);
         ifstream kfile_stream(kfile);
+        if (kfile_stream.is_open()) {
         while (getline(kfile_stream, key_buf))
             key += key_buf;
+        } else {
+            cerr << "\nCan't open " << kfile << "\n\n";
+            return 1;
+        }
         if (key.length() < cipher.length()) {
-            cerr << " Error: Key length cannot be shorter than cipher length.\n";
+            cerr << "\nError: Key length cannot be shorter than cipher length.\n\n";
             return 1;
         }
         for (int i = 0; i < int(cipher.length()); i++) {

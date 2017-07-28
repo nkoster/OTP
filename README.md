@@ -23,9 +23,9 @@ Install:
 sudo cp otp /usr/local/bin
 ````
 
-## Usage:
+## Usage
 
-#### Encrypt
+##### Encrypt
 
 ````
 echo 'My secret' | ./otp

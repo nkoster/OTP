@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
                 cipher_file << cipher;
                 cipher_file.close();
             } else {
-                cerr << "\nCan't write " << cipher_file_name << "\n\n";
+                cerr << "\notp: Can't write " << cipher_file_name << "\n\n";
                 return 1;
             }
             ofstream key_file;
@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
                 key_file.close();
                 return 0;
             } else {
-                cerr << "\nCan't write " << key_file_name << "\n\n";
+                cerr << "\notp: Can't write " << key_file_name << "\n\n";
                 return 1;
             }
         } else {
@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
         cout << "   Key: ";
         getline(cin, key);
         if (key.length() < cipher.length()) {
-            cerr << " Error: Key length cannot be shorter than cipher length.\n";
+            cerr << "\notp: Key length cannot be shorter than cipher length.\n\n";
             return 1;
         }
         for (int i = 0; i < int(cipher.length()); i++) {
@@ -76,11 +76,11 @@ int main(int argc, char** argv) {
         if (kfile_stream.is_open()) {
         while (getline(kfile_stream, key_buf)) key += key_buf;
         } else {
-            cerr << "\nCan't open " << kfile << "\n\n";
+            cerr << "\notp: Can't open " << kfile << "\n\n";
             return 1;
         }
         if (key.length() < cipher.length()) {
-            cerr << "\nError: Key length cannot be shorter than cipher length.\n\n";
+            cerr << "\notp: Key length cannot be shorter than cipher length.\n\n";
             return 1;
         }
         for (int i = 0; i < int(cipher.length()); i++) {

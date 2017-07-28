@@ -9,7 +9,7 @@ For instance, on my Linux laptop, this issue will become problametic when the co
 You can decide to encrypt/decrypt from files, but you have to understand the risk when doing so:
 Do NOT forget to [shred](https://en.wikipedia.org/wiki/Shred_(Unix)) the key file!
 
-### Install
+## Install
 
 Compile:
 
@@ -23,9 +23,9 @@ Install:
 sudo cp otp /usr/local/bin
 ````
 
-### Usage:
+## Usage:
 
-### Encrypt
+#### Encrypt
 
 ````
 echo 'My secret' | ./otp

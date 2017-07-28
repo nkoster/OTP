@@ -70,13 +70,11 @@ int main(int argc, char** argv) {
         cout << " Plain: " << plain << "\n\n";
         return 0;
     } else if (argc > 3 && string(argv[1]) == "-d" && string(argv[2]) == "-kfile") {
-        while (getline(cin, cipher_buf))
-            cipher += cipher_buf;
+        while (getline(cin, cipher_buf)) cipher += cipher_buf;
         kfile = string(argv[3]);
         ifstream kfile_stream(kfile);
         if (kfile_stream.is_open()) {
-        while (getline(kfile_stream, key_buf))
-            key += key_buf;
+        while (getline(kfile_stream, key_buf)) key += key_buf;
         } else {
             cerr << "\nCan't open " << kfile << "\n\n";
             return 1;

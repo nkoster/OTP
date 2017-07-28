@@ -75,4 +75,4 @@ This should output the content of the newly written test.tgz.
 
 #### To do
 
-Automated key shredding when decrypting might be an interesting feature as well.
+Automated key shredding when decrypting might be an interesting feature.

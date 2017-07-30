@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
     const int start = 33;
     int c, k, m;
     char k_char;
-    string key="", key_buf="", kfile="", cipher="", cipher_buf="", plain="", text="";
+    string key, key_buf, kfile, cipher, cipher_buf, plain, text;
     string cipher_file_name="/tmp/otp.cipher", key_file_name="/tmp/otp.key";
     if ((argc == 1) || (argc == 2 && string(argv[1]) == "-w")) {
         srand(time(0));
